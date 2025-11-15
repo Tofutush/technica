@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     
    
     [Header("Player Stats")]
-    public int maxHealth = 100;
+    //public int maxHealth = 100;
     private int currentHealth;
     
 

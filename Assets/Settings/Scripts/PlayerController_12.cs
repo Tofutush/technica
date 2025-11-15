@@ -19,15 +19,15 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     public Transform firePoint;
     public float fireRate = 4f;
     private float nextFireTime = 0f;
-    private Animator anim;
+    //private Animator anim;
 
     void Start()
     {
         // Subscribes this class to the minigame manager. This gives access to the
         // 'OnMinigameStart()' and 'OnTimerEnd()' functions. Otherwise, they won't be called
-        MinigameManager.Subscribe(this);
+        MinigameManagerTrue.Subscribe(this);
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     /*void OnInteract(InputValue val)
@@ -43,19 +43,19 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 
     void OnMove(InputValue val)
     {
-        if (!MinigameManager.IsReady()) // IMPORTANT: Don't allow any input while the countdown is still occuring
+        if (!MinigameManagerTrue.IsReady()) // IMPORTANT: Don't allow any input while the countdown is still occuring
             return;
 
         Vector2 input = val.Get<Vector2>(); // Get the Vector2 that represents input
         rb.linearVelocity = input * 5f; // 5f is a magic number; speed.
 
-        bool moving = input.x != 0 || input.y != 0;
-        anim.SetBool("isRunning", moving);
+        //bool moving = input.x != 0 || input.y != 0;
+        //anim.SetBool("isRunning", moving);
     }
     void OnShoot(InputValue val)
     {
         Debug.Log("Shoot button pressed!");
-        if (!MinigameManager.IsReady())
+        if (!MinigameManagerTrue.IsReady())
             return;
         if (Time.time < nextFireTime)
             return;
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 
     void Shoot()
     {
-        anim.SetTrigger("Throw");
+        //anim.SetTrigger("Throw");
         if (projectilePrefab == null || firePoint == null) return;
 
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     public void OnTimerEnd()
     {
         // Timer has expired
-        MinigameManager.SetStateToFailure();
-        MinigameManager.EndGame();
+        MinigameManagerTrue.SetStateToFailure();
+        MinigameManagerTrue.EndGame();
     }
 }
