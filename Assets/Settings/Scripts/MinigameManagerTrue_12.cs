@@ -41,31 +41,31 @@ public class MinigameManagerTrue : MonoBehaviour
 
     IEnumerator ReadyCountdown()
     {
-        Time.timeScale = 0f;
+       Time.timeScale = 0f;
         for (int i = 3; i > 0; i--)
         {
-            CoreUI.CountdownText.text = i.ToString();
+            //CoreUI.CountdownText.text = i.ToString();
             yield return new WaitForSecondsRealtime(1);
-        }
+        } 
 
         // Start game
         Time.timeScale = 1f;
         mstate = MinigameState.PLAYING;
-        CoreUI.CountdownText.gameObject.SetActive(false);
+        //CoreUI.CountdownText.gameObject.SetActive(false);
 
         foreach (MinigameSubscriber s in subscribers)
             s.OnMinigameStart();
     }
 
-    void Update()
+    /*void Update()
     {
-        /*CoreUI.Timer.value -= Time.deltaTime;
+        CoreUI.Timer.value -= Time.deltaTime;
         if (CoreUI.Timer.value <= CoreUI.Timer.minValue)
         {
             foreach (MinigameSubscriber s in subscribers)
                 s.OnTimerEnd();
-        }*/
-    }
+        }
+    } */
 
     // Exposed functions
     public static bool IsReady()
