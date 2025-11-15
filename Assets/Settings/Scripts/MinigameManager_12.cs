@@ -67,12 +67,12 @@ public class MinigameManager : MonoBehaviour
         Time.timeScale = 0f;
         for (int i = 3; i > 0; i--)
         {
-            CoreUI.CountdownText.text = i.ToString();
+           // CoreUI.CountdownText.text = i.ToString();
             yield return new WaitForSecondsRealtime(1);
         }
         Time.timeScale = 1f;
         mstate = MinigameState.PLAYING;
-        CoreUI.CountdownText.gameObject.SetActive(false);
+        //CoreUI.CountdownText.gameObject.SetActive(false);
         instruct.enabled = false;
         foreach (MinigameSubscriber s in subscribers)
             s.OnMinigameStart();
