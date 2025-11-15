@@ -33,4 +33,10 @@ public class PlayerAttack : MonoBehaviour
             attackCounter -= Time.deltaTime;
         }
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
 }
