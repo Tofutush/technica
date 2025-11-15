@@ -37,7 +37,7 @@ public class PlayerControllerMain : MonoBehaviour, MinigameSubscriber
             return;
 
         Vector2 input = val.Get<Vector2>(); // Get the Vector2 that represents input
-        rb.linearVelocity = input * 7f; // 5f is a magic number; speed.
+        rb.linearVelocity = input * 5f; // 5f is a magic number; speed.
     }
 
     public void OnMinigameStart()
