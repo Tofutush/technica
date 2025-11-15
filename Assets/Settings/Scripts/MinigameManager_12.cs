@@ -26,9 +26,9 @@ public class MinigameManager : MonoBehaviour
     private TextMeshProUGUI statetext;
 
     [Header("You're welcome to change these fields:")]
-    [SerializeField]
+    /*[SerializeField]
     [Tooltip("The length of the minigame timer, in seconds")]
-    private float minigameLength = 65f;
+    private float minigameLength = 65f; */
 
     [SerializeField]
     [Tooltip("Reference to the boss object")]
@@ -51,8 +51,8 @@ public class MinigameManager : MonoBehaviour
 
     void Start()
     {
-        CoreUI.Timer.maxValue = minigameLength;
-        CoreUI.Timer.value = minigameLength;
+        //CoreUI.Timer.maxValue = minigameLength;
+        //CoreUI.Timer.value = minigameLength;
         mstate = MinigameState.READY;
 
         // Hide panels at start
@@ -109,7 +109,7 @@ public class MinigameManager : MonoBehaviour
         }
 
         // Decrease timer
-        CoreUI.Timer.value -= Time.deltaTime;
+        /*CoreUI.Timer.value -= Time.deltaTime;
 
         // Check for timer end
         if (CoreUI.Timer.value <= CoreUI.Timer.minValue)
@@ -119,7 +119,7 @@ public class MinigameManager : MonoBehaviour
                 s.OnTimerEnd();
             SetStateToFailure();
             EndGame();
-        }
+        }*/
     }
 
     // Exposed functions

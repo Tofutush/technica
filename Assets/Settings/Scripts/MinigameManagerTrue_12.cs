@@ -26,13 +26,13 @@ public class MinigameManagerTrue : MonoBehaviour
         singleton.subscribers.Add(subscriber);
     }
 
-    [Header("You're welcome to change these fields:")]
-    [SerializeField] [Tooltip("The length of the minigame timer, in seconds")] private float minigameLength = 10f;
+    //[Header("You're welcome to change these fields:")]
+    //[SerializeField] [Tooltip("The length of the minigame timer, in seconds")] private float minigameLength = 10f;
 
     void Start()
     {
-        CoreUI.Timer.maxValue = minigameLength;
-        CoreUI.Timer.value = minigameLength;
+        //CoreUI.Timer.maxValue = minigameLength;
+        //CoreUI.Timer.value = minigameLength;
 
         // Ready countdown:
         mstate = MinigameState.READY;
@@ -59,12 +59,12 @@ public class MinigameManagerTrue : MonoBehaviour
 
     void Update()
     {
-        CoreUI.Timer.value -= Time.deltaTime;
+        /*CoreUI.Timer.value -= Time.deltaTime;
         if (CoreUI.Timer.value <= CoreUI.Timer.minValue)
         {
             foreach (MinigameSubscriber s in subscribers)
                 s.OnTimerEnd();
-        }
+        }*/
     }
 
     // Exposed functions
