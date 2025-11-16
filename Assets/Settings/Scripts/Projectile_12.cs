@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
     void OnEnable()
     {
         CancelInvoke(); // important for pooling!
-        
+
         rb.linearVelocity = transform.right * speed; // <- FIXED
 
         Invoke(nameof(Disable), lifetime);
@@ -34,6 +34,12 @@ public class Projectile : MonoBehaviour
         {
             boss.TakeDamage(PlayerStats.Attack); // deal 10 damage (you can change this)
             Disable();           // deactivate projectile after hit
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            enemy.TakeDamage(PlayerStats.Attack);
         }
     }
 }

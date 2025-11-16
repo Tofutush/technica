@@ -5,7 +5,9 @@ using System.Collections.Generic;
 
 public class MinigameManagerTrue : MonoBehaviour
 {
-    static MinigameManagerTrue singleton; void Awake() { singleton = this; }
+    public bool hasKilled = false;
+
+    public static MinigameManagerTrue singleton; void Awake() { singleton = this; }
     private enum MinigameState
     {
         READY,
@@ -41,12 +43,12 @@ public class MinigameManagerTrue : MonoBehaviour
 
     IEnumerator ReadyCountdown()
     {
-       Time.timeScale = 0f;
+        Time.timeScale = 0f;
         for (int i = 3; i > 0; i--)
         {
             //CoreUI.CountdownText.text = i.ToString();
             yield return new WaitForSecondsRealtime(1);
-        } 
+        }
 
         // Start game
         Time.timeScale = 1f;
@@ -92,9 +94,9 @@ public class MinigameManagerTrue : MonoBehaviour
                 " Use MinigameManagerTrue.SetStateToSuccess() or MinigameManagerTrue.SetStateToFailure()");
 
 #if UNITY_EDITOR
-       EditorApplication.isPlaying = false;
+        EditorApplication.isPlaying = false;
 #else
         // idk. I'll figure it out when I update this script later.
 #endif
     }
-}  
+}
