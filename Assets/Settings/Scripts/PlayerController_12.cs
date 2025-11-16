@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 
         nextFireTime = Time.time + 1f / fireRate;
         Shoot();
+        anim.SetBool("isAttack", false); // * after shoot completes, resest isAttack status for animation
     }
 
     void Shoot()
@@ -95,7 +96,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Debug.Log("Projectile spawned!");*/
         anim.SetBool("isAttack", true);
-         if (projectilePrefab == null || firePoint == null)
+        if (projectilePrefab == null || firePoint == null)
         {
             Debug.LogWarning("Cannot shoot: projectilePrefab or firePoint is null!");
             return;
