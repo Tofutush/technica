@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Protag Knife Attack
+  m_Name: Protag Front Walk
   serializedVersion: 7
   m_Legacy: 1
   m_Compressed: 0
@@ -21,13 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
-    - time: 0.33333334
-      value: {fileID: 1238504638007779237, guid: 129745afa056e45608bdbe7199fa1486, type: 3}
-    - time: 0.5
-      value: {fileID: -7277598421071255947, guid: 4fd70843d516f4825a650e3020d2d95f, type: 3}
-    - time: 0.5833333
-      value: {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
+      value: {fileID: -8815986610049527812, guid: 2ba2baed0833946778ad229de15f6f37, type: 3}
+    - time: 0.25
+      value: {fileID: 8328247999216752778, guid: 60a362a316c7e49dc842c274c81dc4f8, type: 3}
+    - time: 0.48333332
+      value: {fileID: -8815986610049527812, guid: 2ba2baed0833946778ad229de15f6f37, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,7 +44,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.59999996
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
