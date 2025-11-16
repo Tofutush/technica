@@ -5,21 +5,50 @@ public class Enemy : MonoBehaviour
     public int health;
     public float speed;
 
-    private Animator animator;
+    public float patrolDistance;
+
+    private bool movingRight = true;
+    private float leftLimit;
+    private float rightLimit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // animator = GetComponent<Animator>();
-        // animator.SetBool("isRunning", true);
+        leftLimit = transform.position.x - patrolDistance;
+        rightLimit = transform.position.x + patrolDistance;
+        Debug.Log("right limit:");
+        Debug.Log(rightLimit);
+        Debug.Log("left limit:");
+        Debug.Log(leftLimit);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (health < 0)
+        if (health <= 0)
         {
             ChoiceUI.Instance.showChoice(this);
+        }
+        else
+        {
+            if (movingRight)
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                Debug.Log(transform.position.x);
+                if (transform.position.x >= rightLimit)
+                {
+                    movingRight = false;
+                }
+            }
+            else
+            {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                Debug.Log(transform.position.x);
+                if (transform.position.x <= leftLimit)
+                {
+                    movingRight = true;
+                }
+            }
         }
     }
 
