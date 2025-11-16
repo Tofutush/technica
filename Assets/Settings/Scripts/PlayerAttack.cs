@@ -39,9 +39,7 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log(attackCounter);
         if (attackCounter <= 0)
         {
-            Debug.Log("pressed left mouse");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyLayer);
-            Debug.Log(enemiesToDamage.Length);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
