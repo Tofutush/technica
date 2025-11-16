@@ -4,6 +4,9 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public float speed;
+    public GameObject projectilePrefab;
+    public float projectileCooldown;
+    public Transform firePoint;
 
     public float patrolDistance;
 
@@ -11,15 +14,13 @@ public class Enemy : MonoBehaviour
     private float leftLimit;
     private float rightLimit;
 
+    private float timerCurrent;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         leftLimit = transform.position.x - patrolDistance;
         rightLimit = transform.position.x + patrolDistance;
-        Debug.Log("right limit:");
-        Debug.Log(rightLimit);
-        Debug.Log("left limit:");
-        Debug.Log(leftLimit);
     }
 
     // Update is called once per frame
@@ -34,7 +35,6 @@ public class Enemy : MonoBehaviour
             if (movingRight)
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
-                Debug.Log(transform.position.x);
                 if (transform.position.x >= rightLimit)
                 {
                     movingRight = false;
@@ -43,11 +43,37 @@ public class Enemy : MonoBehaviour
             else
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
-                Debug.Log(transform.position.x);
                 if (transform.position.x <= leftLimit)
                 {
                     movingRight = true;
                 }
+            }
+
+            if (timerCurrent <= 0)
+            {
+                Vector3 spawnPosition = firePoint.position + firePoint.right * 0.5f; // tweak 0.5f if needed
+                GameObject proj = Instantiate(projectilePrefab, spawnPosition, firePoint.rotation);
+
+                // Make sure projectile is active
+                if (!proj.activeSelf)
+                    proj.SetActive(true);
+
+                // Ensure Rigidbody2D is set up correctly
+                Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
+                if (rb == null)
+                {
+                    Debug.LogWarning("Projectile has no Rigidbody2D!");
+                }
+                else
+                {
+                    rb.linearVelocity = new Vector2(movingRight ? 1 : -1, 0) * proj.GetComponent<EnemyProjectile>().speed; // speed, adjust as needed
+                }
+
+                timerCurrent = projectileCooldown;
+            }
+            else
+            {
+                timerCurrent -= Time.deltaTime;
             }
         }
     }

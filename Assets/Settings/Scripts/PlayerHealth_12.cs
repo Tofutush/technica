@@ -4,14 +4,15 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    //public PlayerStats player;
+    public PlayerStats player;
     public TextMeshProUGUI alltext;
-    
-   
+    private Stats stat;
+
+
     [Header("Player Stats")]
     //public int maxHealth = 100;
     private int currentHealth;
-    
+
 
     void Start()
     {
@@ -20,14 +21,17 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage- PlayerStats.Defense;
-        alltext.text = ("Player took " + damage + " damage! HP left: " + currentHealth);
+        currentHealth -= damage - PlayerStats.Defense;
+        // alltext.text = ("Player took " + damage + " damage! HP left: " + currentHealth);
         Debug.Log("Player took " + damage + " damage! HP left: " + currentHealth);
 
         if (currentHealth <= 0)
         {
             Die();
         }
+        //stat = currentHealth;
+        //player.health = stat;
+        player.updateText();
     }
 
     void Die()
