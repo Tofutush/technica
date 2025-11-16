@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour
     {
         updateText();
     }
-    private void updateText()
+    public void updateText()
     {
         alltext.text = "Health: " + health.GetValue().ToString() + " Attack: " + attack.GetValue().ToString() + " Defense: " + defense.GetValue().ToString();
 
