@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
         {
             if (movingRight)
             {
-                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
                 Debug.Log(transform.position.x);
                 if (transform.position.x >= rightLimit)
                 {
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
                 Debug.Log(transform.position.x);
                 if (transform.position.x <= leftLimit)
                 {
