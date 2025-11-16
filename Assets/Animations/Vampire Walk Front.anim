@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Protag Front Walk
+  m_Name: Vampire Walk Front
   serializedVersion: 7
   m_Legacy: 1
   m_Compressed: 0
@@ -21,15 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 8328247999216752778, guid: 60a362a316c7e49dc842c274c81dc4f8, type: 3}
+      value: {fileID: 4589206497665559384, guid: 8938678e7a30b43a0a3f7f47c6c20eb3, type: 3}
     - time: 0.25
-      value: {fileID: 8328247999216752778, guid: 60a362a316c7e49dc842c274c81dc4f8, type: 3}
-    - time: 0.48333332
-      value: {fileID: -8815986610049527812, guid: 2ba2baed0833946778ad229de15f6f37, type: 3}
-    - time: 0.73333335
-      value: {fileID: 8328247999216752778, guid: 60a362a316c7e49dc842c274c81dc4f8, type: 3}
-    - time: 0.96666664
-      value: {fileID: -8815986610049527812, guid: 2ba2baed0833946778ad229de15f6f37, type: 3}
+      value: {fileID: -8927527545611965489, guid: 1192438ed6b5e44738718bc8d549e815, type: 3}
+    - time: 0.5
+      value: {fileID: 4589206497665559384, guid: 8938678e7a30b43a0a3f7f47c6c20eb3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,7 +44,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9833333
+    m_StopTime: 0.51666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
