@@ -21,10 +21,6 @@ public class Enemy : MonoBehaviour
     {
         leftLimit = transform.position.x - patrolDistance;
         rightLimit = transform.position.x + patrolDistance;
-        Debug.Log("right limit:");
-        Debug.Log(rightLimit);
-        Debug.Log("left limit:");
-        Debug.Log(leftLimit);
     }
 
     // Update is called once per frame
@@ -39,7 +35,6 @@ public class Enemy : MonoBehaviour
             if (movingRight)
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
-                Debug.Log(transform.position.x);
                 if (transform.position.x >= rightLimit)
                 {
                     movingRight = false;
@@ -48,7 +43,6 @@ public class Enemy : MonoBehaviour
             else
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
-                Debug.Log(transform.position.x);
                 if (transform.position.x <= leftLimit)
                 {
                     movingRight = true;
