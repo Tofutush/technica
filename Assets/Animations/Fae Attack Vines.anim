@@ -6,9 +6,9 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Protag Knife Animation
+  m_Name: Fae Attack Vines
   serializedVersion: 7
-  m_Legacy: 0
+  m_Legacy: 1
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -21,13 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
-    - time: 0.35
-      value: {fileID: 1238504638007779237, guid: 129745afa056e45608bdbe7199fa1486, type: 3}
-    - time: 0.6
-      value: {fileID: -7277598421071255947, guid: 4fd70843d516f4825a650e3020d2d95f, type: 3}
-    - time: 0.8333333
-      value: {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
+      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
+    - time: 0.23333333
+      value: {fileID: 4376753324184068468, guid: f3b08d374b17646bda2d9c4a08328caf, type: 3}
+    - time: 0.5
+      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
+    - time: 0.73333335
+      value: {fileID: 4376753324184068468, guid: f3b08d374b17646bda2d9c4a08328caf, type: 3}
+    - time: 0.98333335
+      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -39,27 +41,14 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - serializedVersion: 2
-      path: 0
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    pptrCurveMapping:
-    - {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
-    - {fileID: 1238504638007779237, guid: 129745afa056e45608bdbe7199fa1486, type: 3}
-    - {fileID: -7277598421071255947, guid: 4fd70843d516f4825a650e3020d2d95f, type: 3}
-    - {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
+    genericBindings: []
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.84999996
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

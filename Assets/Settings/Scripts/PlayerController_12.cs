@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     public float jumpForce = 10f; // how high player can rise
     public PlayerInput playerInput;
     private bool inputBlocked = false;
-    //private Animator anim;
+    private Animator anim;
 
     void Start()
     {
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         // 'OnMinigameStart()' and 'OnTimerEnd()' functions. Otherwise, they won't be called
         MinigameManagerTrue.Subscribe(this);
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     /*void Update()
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
             facingDirection = 1;
         else if (input.x < -0.01f)
             facingDirection = -1;
-        //transform.localScale = new Vector3(facingDirection, 1, 1);
+        transform.localScale = new Vector3(facingDirection, 1, 1);
     }
     void OnShoot(InputValue val)
     {
@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Debug.Log("Projectile spawned!");*/
+        anim.SetBool("isAttack", true);
          if (projectilePrefab == null || firePoint == null)
         {
             Debug.LogWarning("Cannot shoot: projectilePrefab or firePoint is null!");
@@ -123,13 +124,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         Debug.Log($"Projectile spawned at {spawnPosition} with velocity {rb.linearVelocity}");
     }
     
-    void OnJump(InputValue value)
-    {
-        if (inputBlocked) return;
-
-
-        Jump();
-    }
+    
 
     void Jump()
     {
@@ -137,13 +132,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         //jumpStartY = transform.position.y;
 
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        StartCoroutine(BlockAllInput(3f));
-    }
-    IEnumerator BlockAllInput(float delay)
-    {
-        inputBlocked = true;               // Block all input
-        yield return new WaitForSeconds(delay);
-        inputBlocked = false;  
+        anim.SetBool("isJump", true);
     }
 
     public void OnMinigameStart()
