@@ -19,14 +19,14 @@ using UnityEngine;
             baseValue += amount;
         }
 
-        public void Debuff(int amount)
+        /*public void Debuff(int amount)
         {
             baseValue -= amount;
             if (baseValue <= 0) 
             {
                 baseValue=0;
             }
-        }
+        }*/
         
         
         /*public float BaseValue;
