@@ -13,7 +13,10 @@ public class Projectile : MonoBehaviour
 
     void OnEnable()
     {
-        rb.linearVelocity = transform.right * speed;
+        CancelInvoke(); // important for pooling!
+        
+        rb.linearVelocity = transform.right * speed; // <- FIXED
+
         Invoke(nameof(Disable), lifetime);
         Debug.Log("Velocity set to: " + rb.linearVelocity);
     }

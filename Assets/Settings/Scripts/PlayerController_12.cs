@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     public Transform firePoint;
     public float fireRate = 4f;
     private float nextFireTime = 0f;
+    private int facingDirection = 1;
     //private Animator anim;
 
     void Start()
@@ -51,10 +52,14 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 
         //bool moving = input.x != 0 || input.y != 0;
         //anim.SetBool("isRunning", moving);
+        if (input.x > 0.01f)
+            facingDirection = 1;
+        else if (input.x < -0.01f)
+            facingDirection = -1;
     }
     void OnShoot(InputValue val)
     {
-        Debug.Log("Shoot button pressed!");
+        Debug.Log("Shoot button pressed! " + MinigameManagerTrue.IsReady());
         if (!MinigameManagerTrue.IsReady())
             return;
         if (Time.time < nextFireTime)
@@ -67,10 +72,37 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     void Shoot()
     {
         //anim.SetTrigger("Throw");
-        if (projectilePrefab == null || firePoint == null) return;
+        /*if (projectilePrefab == null || firePoint == null) return;
 
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        Debug.Log("Projectile spawned!");
+        Debug.Log("Projectile spawned!");*/
+         if (projectilePrefab == null || firePoint == null)
+        {
+            Debug.LogWarning("Cannot shoot: projectilePrefab or firePoint is null!");
+            return;
+        }
+
+        // Spawn projectile slightly in front of firePoint to avoid colliding with player
+        Vector3 spawnPosition = firePoint.position + firePoint.right * 0.5f; // tweak 0.5f if needed
+        GameObject proj = Instantiate(projectilePrefab, spawnPosition, firePoint.rotation);
+
+        // Make sure projectile is active
+        if (!proj.activeSelf)
+            proj.SetActive(true);
+
+        // Ensure Rigidbody2D is set up correctly
+        Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogWarning("Projectile has no Rigidbody2D!");
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(facingDirection, 0) * proj.GetComponent<Projectile>().speed; // speed, adjust as needed
+        }
+
+        // Debug log
+        Debug.Log($"Projectile spawned at {spawnPosition} with velocity {rb.linearVelocity}");
     }
 
     public void OnMinigameStart()
