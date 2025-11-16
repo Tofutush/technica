@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fae Attack Vines
+  m_Name: Mage Magic Attack
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
-    - time: 0.23333333
-      value: {fileID: 4376753324184068468, guid: f3b08d374b17646bda2d9c4a08328caf, type: 3}
-    - time: 0.5
-      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
-    - time: 0.73333335
-      value: {fileID: 4376753324184068468, guid: f3b08d374b17646bda2d9c4a08328caf, type: 3}
-    - time: 0.98333335
-      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
+      value: {fileID: 2344376572478861596, guid: 0be85d98775b6451781323be2bf4f23f, type: 3}
+    - time: 0.41666666
+      value: {fileID: -7676099917140997100, guid: be9419c96ffc449e685a95976e592a3d, type: 3}
+    - time: 0.75
+      value: {fileID: -2422736663510346584, guid: 6a62a61af7d5643cd945ae883656a452, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,7 +44,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.76666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -465,11 +465,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 690.1
+      value: 495.84
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.39
+      value: 20.29
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -534,7 +534,7 @@ Animation:
   m_GameObject: {fileID: 415489669}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 569d66991264544fd859e00192e869b2, type: 2}
+  m_Animation: {fileID: 7400000, guid: 6ce02c99c08bf479ea03e35582510149, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 569d66991264544fd859e00192e869b2, type: 2}
   - {fileID: 7400000, guid: 6ce02c99c08bf479ea03e35582510149, type: 2}
@@ -606,7 +606,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &415489673
 Animator:
   serializedVersion: 7
@@ -1189,6 +1189,8 @@ Animation:
   - {fileID: 7400000, guid: 6afa38ca2dc6c4a3eb7b0fc1a181996e, type: 2}
   - {fileID: 7400000, guid: 3da1c6f7ed1684fbea9c84429daacdb8, type: 2}
   - {fileID: 7400000, guid: c8664c782417c4e7aba0aa6c26a3407c, type: 2}
+  - {fileID: 7400000, guid: 45136a483f26544f99032f57337ba006, type: 2}
+  - {fileID: 7400000, guid: 7bbdc24eccf274290bf5b4da032962cd, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1649,7 +1651,7 @@ PrefabInstance:
     - target: {fileID: 4623343478706576103, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4057463428830958810, guid: 692cb669a713049fba26f20538bddd5e, type: 3}
+      objectReference: {fileID: -3663092544118380037, guid: 9bea4368718c74c6fbf7b0c97797e972, type: 3}
     - target: {fileID: 4623343478706576103, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -1660,11 +1662,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 824.64
+      value: 827.04
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -33.43
+      value: -33.57
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1726,9 +1728,13 @@ Animation:
   m_GameObject: {fileID: 986715737}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 57256a0aed2ae485882e7def56df7bd2, type: 2}
   m_Animations:
-  - {fileID: 0}
+  - {fileID: 7400000, guid: 8bc375d70ea874dc18ba28d234c5924c, type: 2}
+  - {fileID: 7400000, guid: 57256a0aed2ae485882e7def56df7bd2, type: 2}
+  - {fileID: 7400000, guid: 29361f0df669442f7a99f0d94cb36e76, type: 2}
+  - {fileID: 7400000, guid: c386a25e729fe4fedac63860d191452c, type: 2}
+  - {fileID: 7400000, guid: cf250c72be6c643e98467e9344bbcdbd, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1797,7 +1803,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1033499497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,11 +2848,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 824.64
+      value: 772.6
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -33.43
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2908,9 +2914,13 @@ Animation:
   m_GameObject: {fileID: 1857969362}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 53c6a469014e9416db0cb2390f18537a, type: 2}
   m_Animations:
-  - {fileID: 0}
+  - {fileID: 7400000, guid: d6c7797bd1d5c4b82b12facf445e0679, type: 2}
+  - {fileID: 7400000, guid: 53c6a469014e9416db0cb2390f18537a, type: 2}
+  - {fileID: 7400000, guid: c353fae58d3c1410ba8f69717a74ebf8, type: 2}
+  - {fileID: 7400000, guid: f2822d69783f84230b644f209bfc9abf, type: 2}
+  - {fileID: 7400000, guid: a957b812f1ad44c07aa3da7834afde9a, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2979,7 +2989,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &1863892431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3026,11 +3036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 763.56
+      value: 719.44
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3095,6 +3105,8 @@ Animation:
   m_Animation: {fileID: 7400000, guid: f22b05d715ce7453e855b1eb47e82302, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: f22b05d715ce7453e855b1eb47e82302, type: 2}
+  - {fileID: 7400000, guid: 09411db097ff84bc4b41c6dd7468fe8f, type: 2}
+  - {fileID: 7400000, guid: 1d6349ae6041b4de6ab63232f5cdf8b8, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -3163,7 +3175,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &2018572960 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8335932374386711806, guid: c84905b55cc81604c922a20b993a8112, type: 3}
@@ -3447,7 +3459,7 @@ Animation:
   m_GameObject: {fileID: 4413881600746620533}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 11f5f7f294bc5489ca9b4bd5a6205554, type: 2}
+  m_Animation: {fileID: 7400000, guid: 47f3406d3757a43ecbed46b7c53a2069, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 47f3406d3757a43ecbed46b7c53a2069, type: 2}
   - {fileID: 7400000, guid: eb198343c4a414ce2acbcd658c3e4fe8, type: 2}

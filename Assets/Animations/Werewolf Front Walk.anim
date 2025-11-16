@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fae Attack Vines
+  m_Name: Werewolf Front Walk
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
-    - time: 0.23333333
-      value: {fileID: 4376753324184068468, guid: f3b08d374b17646bda2d9c4a08328caf, type: 3}
+      value: {fileID: -6242075304956829607, guid: 0ce7002ca956c495a9760d42a3224ea0, type: 3}
+    - time: 0.25
+      value: {fileID: 7031656710392891723, guid: 6c9f9bd6121344c49a63cc54b2e9f528, type: 3}
     - time: 0.5
-      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
-    - time: 0.73333335
-      value: {fileID: 4376753324184068468, guid: f3b08d374b17646bda2d9c4a08328caf, type: 3}
-    - time: 0.98333335
-      value: {fileID: 9018773464993844125, guid: c6f5378ca022d4437b88e5bf393eee19, type: 3}
+      value: {fileID: -6242075304956829607, guid: 0ce7002ca956c495a9760d42a3224ea0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,7 +44,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.51666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
