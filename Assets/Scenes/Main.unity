@@ -606,7 +606,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &415489673
 Animator:
   serializedVersion: 7
@@ -1865,7 +1865,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1033499497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,7 +3047,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &1863892431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3231,7 +3231,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &2018572960 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8335932374386711806, guid: c84905b55cc81604c922a20b993a8112, type: 3}

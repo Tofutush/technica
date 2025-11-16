@@ -20,8 +20,24 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     public Transform firePoint;
     public float fireRate = 4f;
     private float nextFireTime = 0f;
-    private int facingDirection = 1; 
-    public float jumpForce = 10f; // how high player can rise
+    private int facingDirection = 1;
+    
+    [Header("Jumping")] 
+    public float jumpForce = 7f; // how high player can rise
+    private bool isJumping = false;
+
+    public LayerMask groundLayer;
+    public Transform groundCheck;
+    public float groundCheckRadius=0.15f;
+
+    private int jumpCount = 0;
+    public int maxJumps = 2;
+    public bool isGrounded;
+
+    [Header("Movement")]
+    public float moveSpeed = 5f;
+
+
     public PlayerInput playerInput;
     private bool inputBlocked = false;
     private Animator anim;
@@ -33,6 +49,25 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         MinigameManagerTrue.Subscribe(this);
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (isGrounded)
+        {
+            jumpCount = 0;
+            isJumping = false;
+        }
+
+        if (isJumping && rb.linearVelocity.y > jumpForce)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position - Vector3.down, groundCheckRadius + 2, groundLayer);
+
     }
 
     /*void Update()
@@ -65,7 +100,16 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
             return;
 
         Vector2 input = val.Get<Vector2>(); // Get the Vector2 that represents input
-        rb.linearVelocity = input * 5f; // 5f is a magic number; speed.
+
+        if (Mathf.Abs(input.x) < 0.01f && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(input.x * moveSpeed, rb.linearVelocity.y);
+            return;
+        }
+
+        rb.linearVelocity = new Vector2(0,rb.linearVelocity.y); // 5f is a magic number; speed.
+
+
 
         //bool moving = input.x != 0 || input.y != 0;
         //anim.SetBool("isRunning", moving);
@@ -73,8 +117,9 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
             facingDirection = 1;
         else if (input.x < -0.01f)
             facingDirection = -1;
-        transform.localScale = new Vector3(facingDirection, 1, 1);
+        //transform.localScale = new Vector3(facingDirection, 1, 1);
     }
+
     void OnShoot(InputValue val)
     {
         Debug.Log("Shoot button pressed! " + MinigameManagerTrue.IsReady());
@@ -125,13 +170,22 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         Debug.Log($"Projectile spawned at {spawnPosition} with velocity {rb.linearVelocity}");
     }
     
-    
+    void OnJump(InputValue val)
+    {
+        if(!MinigameManagerTrue.IsReady()) return;
+        if (val.isPressed) Jump();
+    }    
 
     void Jump()
     {
         //isJumping = true;
         //jumpStartY = transform.position.y;
+        if (jumpCount >= maxJumps) return;
 
+        if (jumpCount == 0 && !isGrounded) return;
+
+        jumpCount++;
+        isJumping = true;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         anim.SetBool("isJump", true);
     }
