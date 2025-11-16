@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
-                    rb.linearVelocity = new Vector2(movingRight ? 1 : -1, 0) * proj.GetComponent<Projectile>().speed; // speed, adjust as needed
+                    rb.linearVelocity = new Vector2(movingRight ? 1 : -1, 0) * proj.GetComponent<EnemyProjectile>().speed; // speed, adjust as needed
                 }
 
                 timerCurrent = projectileCooldown;

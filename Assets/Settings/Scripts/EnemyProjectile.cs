@@ -31,7 +31,9 @@ public class EnemyProjectile : MonoBehaviour
         PlayerHealth health = collision.GetComponent<PlayerHealth>();
         if (health != null)
         {
+            Debug.Log("Hit player");
             health.TakeDamage(10);
+            Disable();
         }
     }
 }
