@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Protag Side Walk Animation
+  m_Name: Fae Side Walk Animation
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - time: 0.25
-      value: {fileID: 3483647655024021398, guid: d7874671450df4c3087c0694cc7ab66d, type: 3}
-    - time: 0.5
-      value: {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - time: 0.75
-      value: {fileID: -2587942186991146071, guid: d5c394067667e4400b2feaf0f2d010aa, type: 3}
+      value: {fileID: -7856338131193896491, guid: e29352b32116c40f5beee6a83637f195, type: 3}
+    - time: 0.23333333
+      value: {fileID: 3571981592034399525, guid: a9dd2c884ace34ad68d5504254499cbd, type: 3}
+    - time: 0.48333332
+      value: {fileID: -7856338131193896491, guid: e29352b32116c40f5beee6a83637f195, type: 3}
+    - time: 0.73333335
+      value: {fileID: 3154638134710175743, guid: b70a961e113cc44bca10dcbfc57b3bb3, type: 3}
     - time: 1
-      value: {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
+      value: {fileID: -7856338131193896491, guid: e29352b32116c40f5beee6a83637f195, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -52,11 +52,11 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - {fileID: 3483647655024021398, guid: d7874671450df4c3087c0694cc7ab66d, type: 3}
-    - {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - {fileID: -2587942186991146071, guid: d5c394067667e4400b2feaf0f2d010aa, type: 3}
-    - {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
+    - {fileID: -7856338131193896491, guid: e29352b32116c40f5beee6a83637f195, type: 3}
+    - {fileID: 3571981592034399525, guid: a9dd2c884ace34ad68d5504254499cbd, type: 3}
+    - {fileID: -7856338131193896491, guid: e29352b32116c40f5beee6a83637f195, type: 3}
+    - {fileID: 3154638134710175743, guid: b70a961e113cc44bca10dcbfc57b3bb3, type: 3}
+    - {fileID: -7856338131193896491, guid: e29352b32116c40f5beee6a83637f195, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
