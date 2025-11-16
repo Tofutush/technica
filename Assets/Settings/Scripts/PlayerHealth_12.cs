@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         }
         //stat = currentHealth;
         //player.health = stat;
+        player.health.Buff(-(damage - PlayerStats.Defense));
         player.updateText();
     }
 

@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.3889, y: 48.9104}
-  m_SizeDelta: {x: 184.8886, y: 216.4185}
+  m_AnchoredPosition: {x: 186.87, y: 57.972}
+  m_SizeDelta: {x: 133.9263, y: 234.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &21046412
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4775967845671283967, guid: 4347235534fc3ac4688b7a0de39f00e9, type: 3}
+  m_Sprite: {fileID: 5731942436445371919, guid: f0f7d01cc6a632c4e913a4c7c6716495, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -227,13 +227,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NarratorDialogue
   lines:
-  - 'NESSA: I will not beg for you to spare me.'
-  - 'NESSA: But it appears I owe you a gift young one.'
-  - 'NESSA: Let me teach you a skill you might find helpful.'
-  - 'EIRA: It sounds as if you hold stake in finding the mage as well.'
-  - 'EIRA: Let us both find answers, and join me.'
-  - 'EIRA: It''s what my love would''ve wanted of me, and I hope yours as well.'
-  - 'NESSA:  I shall serve our cause to the best of my abilites. Thank you.'
+  - ??? Who goes there?
+  - 'EIRA: Simply a traveller, looking for a girl of light.'
+  - '??? You may call me Druscilla. '
+  - 'DRUSCILLA: But I wouldn''t get used to niceties, I must hold my ground.'
+  - 'DRUSCILLA: For the sake of your lover, I hope you are a strong one.'
+  - 'EIRA: I am.'
   typeSpeed: 0.03
   textBox: {fileID: 1696757547}
 --- !u!114 &761594734

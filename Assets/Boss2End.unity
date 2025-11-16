@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.3889, y: 48.9104}
-  m_SizeDelta: {x: 184.8886, y: 216.4185}
+  m_AnchoredPosition: {x: 180.2722, y: 63.601}
+  m_SizeDelta: {x: 147.1221, y: 245.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &21046412
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4775967845671283967, guid: 4347235534fc3ac4688b7a0de39f00e9, type: 3}
+  m_Sprite: {fileID: 5731942436445371919, guid: f0f7d01cc6a632c4e913a4c7c6716495, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -227,13 +227,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NarratorDialogue
   lines:
-  - 'NESSA: I will not beg for you to spare me.'
-  - 'NESSA: But it appears I owe you a gift young one.'
-  - 'NESSA: Let me teach you a skill you might find helpful.'
-  - 'EIRA: It sounds as if you hold stake in finding the mage as well.'
-  - 'EIRA: Let us both find answers, and join me.'
-  - 'EIRA: It''s what my love would''ve wanted of me, and I hope yours as well.'
-  - 'NESSA:  I shall serve our cause to the best of my abilites. Thank you.'
+  - 'DRUSCILLA: HA! It''s been centuries since I''ve felt a rush like this.'
+  - 'DRUSCILLA: You are a strong one after all, traveller.'
+  - 'DRUSCILLA: Your love is lucky to have you.'
+  - 'EIRA: Lucky to have me? In no way is she lucky, I am the lucky one.'
+  - 'DRUSCILLA: Is that so? May I offer a skill that might bring you closer to her?'
+  - 'EIRA: Yes. And when we find my love, she will spread a light warmer than sun.'
   typeSpeed: 0.03
   textBox: {fileID: 1696757547}
 --- !u!114 &761594734
