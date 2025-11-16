@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     public float fireRate = 4f;
     private float nextFireTime = 0f;
     private int facingDirection = 1;
+    public float maxJumpHeight = 10f;   // how high player can rise
+    private float jumpStartY;
+    private bool isJumping = false;
     //private Animator anim;
 
     void Start()
@@ -31,6 +34,19 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         //anim = GetComponent<Animator>();
     }
 
+    void Update()
+    {
+        if (isJumping && transform.position.y >= jumpStartY + maxJumpHeight)
+        {
+            // Cut upward velocity to zero so they stop rising
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+            isJumping = false; // no more height checks until next jump
+        }
+
+        // When the player starts falling naturally, stop limiting
+        if (rb.linearVelocity.y <= 0)
+            isJumping = false;
+    }
     /*void OnInteract(InputValue val)
     {
         if (!MinigameManager.IsReady()) // IMPORTANT: Don't allow any input while the countdown is still occuring
@@ -103,6 +119,13 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
 
         // Debug log
         Debug.Log($"Projectile spawned at {spawnPosition} with velocity {rb.linearVelocity}");
+    }
+    void Jump()
+    {
+        isJumping = true;
+        jumpStartY = transform.position.y;
+
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxJumpHeight);
     }
 
     public void OnMinigameStart()
