@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 /* PROJECTILES
     This is an example script part of the debug minigame
@@ -19,10 +20,10 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
     public Transform firePoint;
     public float fireRate = 4f;
     private float nextFireTime = 0f;
-    private int facingDirection = 1;
-    public float maxJumpHeight = 10f;   // how high player can rise
-    private float jumpStartY;
-    private bool isJumping = false;
+    private int facingDirection = 1; 
+    public float jumpForce = 10f; // how high player can rise
+    public PlayerInput playerInput;
+    private bool inputBlocked = false;
     //private Animator anim;
 
     void Start()
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         //anim = GetComponent<Animator>();
     }
 
-    void Update()
+    /*void Update()
     {
         if (isJumping && transform.position.y >= jumpStartY + maxJumpHeight)
         {
@@ -44,8 +45,8 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         }
 
         // When the player starts falling naturally, stop limiting
-        if (rb.linearVelocity.y <= 0)
-            isJumping = false;
+        //if (rb.linearVelocity.y <= 0)
+          //  isJumping = false;
     }
     /*void OnInteract(InputValue val)
     {
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
             facingDirection = 1;
         else if (input.x < -0.01f)
             facingDirection = -1;
+        //transform.localScale = new Vector3(facingDirection, 1, 1);
     }
     void OnShoot(InputValue val)
     {
@@ -120,12 +122,28 @@ public class PlayerController : MonoBehaviour, MinigameSubscriber
         // Debug log
         Debug.Log($"Projectile spawned at {spawnPosition} with velocity {rb.linearVelocity}");
     }
+    
+    void OnJump(InputValue value)
+    {
+        if (inputBlocked) return;
+
+
+        Jump();
+    }
+
     void Jump()
     {
-        isJumping = true;
-        jumpStartY = transform.position.y;
+        //isJumping = true;
+        //jumpStartY = transform.position.y;
 
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxJumpHeight);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        StartCoroutine(BlockAllInput(3f));
+    }
+    IEnumerator BlockAllInput(float delay)
+    {
+        inputBlocked = true;               // Block all input
+        yield return new WaitForSeconds(delay);
+        inputBlocked = false;  
     }
 
     public void OnMinigameStart()
