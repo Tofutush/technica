@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPos;
     public float attackRange;
     public LayerMask enemyLayer;
-    public int damage;
 
     private PlayerInput playerInput;
     private InputAction hitAction;
@@ -42,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyLayer);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(PlayerStats.Attack);
             }
             attackCounter = attackCoolDown;
         }
