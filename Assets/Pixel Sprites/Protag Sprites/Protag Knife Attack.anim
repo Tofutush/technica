@@ -6,9 +6,9 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Protag Side Walk Animation
+  m_Name: Protag Knife Attack
   serializedVersion: 7
-  m_Legacy: 0
+  m_Legacy: 1
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -21,15 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - time: 0.25
-      value: {fileID: 3483647655024021398, guid: d7874671450df4c3087c0694cc7ab66d, type: 3}
+      value: {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
+    - time: 0.33333334
+      value: {fileID: 1238504638007779237, guid: 129745afa056e45608bdbe7199fa1486, type: 3}
     - time: 0.5
-      value: {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - time: 0.75
-      value: {fileID: -2587942186991146071, guid: d5c394067667e4400b2feaf0f2d010aa, type: 3}
-    - time: 1
-      value: {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
+      value: {fileID: -7277598421071255947, guid: 4fd70843d516f4825a650e3020d2d95f, type: 3}
+    - time: 0.5833333
+      value: {fileID: -6555978060187465285, guid: f6b8d7c04556a4243901e37ac717c26d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,28 +39,14 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - serializedVersion: 2
-      path: 0
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    pptrCurveMapping:
-    - {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - {fileID: 3483647655024021398, guid: d7874671450df4c3087c0694cc7ab66d, type: 3}
-    - {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
-    - {fileID: -2587942186991146071, guid: d5c394067667e4400b2feaf0f2d010aa, type: 3}
-    - {fileID: 7579649274728502293, guid: 9ef8d44ddb26141eba3a902e88b65992, type: 3}
+    genericBindings: []
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 0.59999996
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
