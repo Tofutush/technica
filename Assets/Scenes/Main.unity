@@ -2267,11 +2267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 697.7
+      value: 719.26
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.9
+      value: 10.63
       objectReference: {fileID: 0}
     - target: {fileID: 8588439817445224448, guid: 7164167ec41802a458a4d766d9b829ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2748,6 +2748,10 @@ PrefabInstance:
       propertyPath: attack.baseValue
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7762557073000514320, guid: 08529d6facd7cad4eadf03ccd15cf9e8, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2817,13 +2821,14 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 47f3406d3757a43ecbed46b7c53a2069, type: 2}
   - {fileID: 7400000, guid: eb198343c4a414ce2acbcd658c3e4fe8, type: 2}
-  - {fileID: 7400000, guid: d722902bed9cd4bd2b1380e53424d796, type: 2}
+  - {fileID: 7400000, guid: c52ee7745dc80436ba2fdf047e9810ff, type: 2}
   - {fileID: 7400000, guid: 11f5f7f294bc5489ca9b4bd5a6205554, type: 2}
+  - {fileID: 7400000, guid: 92c8302d5645e4ea39999591b0a4b8ed, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_UpdateMode: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!95 &4413881600746620536
 Animator:
   serializedVersion: 7
