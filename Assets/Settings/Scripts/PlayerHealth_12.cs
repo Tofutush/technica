@@ -4,8 +4,9 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    //public PlayerStats player;
+    public PlayerStats player;
     public TextMeshProUGUI alltext;
+    private Stats stat;
 
 
     [Header("Player Stats")]
@@ -28,6 +29,9 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
+        //stat = currentHealth;
+        //player.health = stat;
+        player.updateText();
     }
 
     void Die()

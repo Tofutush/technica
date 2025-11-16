@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 54.447}
-  m_SizeDelta: {x: 213.9117, y: 216.3745}
+  m_AnchoredPosition: {x: 0.0000038147, y: -0.0000033379}
+  m_SizeDelta: {x: 392.6347, y: 364.8081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259435182
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1381957560304922036, guid: 5b3f862d0af9d944aa1a3377469e01ea, type: 3}
+  m_Sprite: {fileID: 8738955054946099105, guid: 685ef8f4cdd039c4db173e3a760b6a43, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -227,13 +227,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NarratorDialogue
   lines:
-  - ' Oh adventurers, storytellers \nand curious fools alike gather before \nme for
-    I have a story to tell.
-
-'
-  - A story of community
-  - A story of love
-  - A story of the triumph of all three.
+  - Young Eira and Carys. Two lovers,\n made for eachother, truly.
+  - What Eira lacked in her ability to trust and love,\nCarys mended with her own
+    warmth. While Carys lacked toughness,\nEira sheilded her from the darkness of
+    the world, feuling Carys' ever bright light.
+  - Eira seemed only to take. Every seed she sows withers.\nEach bone she mended
+    grew writhen.\nEach knife cut left decary in its wake.
+  - Carys could do nothing but give. Each scrap tossed\nflourished into a garden,
+    each animal she brushed against\nregained its health and grew lively yet again.\n
+    Each touch seemed to burst with life and light so blinding.
+  - The two explored the forests, gathering in moderation, taking in the wonderful\ncreatures
+    of the forest who were unable to care for themselves.\nThey made a difference
+    together and handed out kindess\n in dark, dangerous places.
+  - 'But peace cannot be perpetual. And this came to fruition as Eira and Carys wandered
+    into a darker part of the forest. Little did they know, they were being watched.
+    The two had crept into the territory of someone unfogiving, uncaring. '
+  - Their only intent was to help, but the triggered a great rage instead. Long sleeping,
+    the great mage once known as Starwhisper, was woken.
   typeSpeed: 0.03
   textBox: {fileID: 1696757547}
 --- !u!114 &761594734
@@ -385,8 +395,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294177779
-  m_fontColor: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 1}
+    rgba: 4292519493
+  m_fontColor: {r: 0.26991096, g: 0.6529164, b: 0.85660374, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -403,8 +413,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -441,7 +451,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -240.22507, y: 94.92743, z: -30.574158, w: -159.86688}
+  m_margin: {x: -240.22507, y: -105.89462, z: -30.574158, w: -159.86688}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -628,8 +638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.036000002, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 24, y: 0}
-  m_SizeDelta: {x: -435.7675, y: -52.5308}
+  m_AnchoredPosition: {x: -9.005203, y: 2.9105072}
+  m_SizeDelta: {x: 38.868, y: -58.3518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958283359
 MonoBehaviour:
@@ -651,7 +661,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1381957560304922036, guid: 5b3f862d0af9d944aa1a3377469e01ea, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
