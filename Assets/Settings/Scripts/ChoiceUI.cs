@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ChoiceUI : MonoBehaviour
 {
+    public static ChoiceUI Instance;
     public GameObject choicePanel;
     public Button killButton;
     public Button spareButton;
@@ -12,6 +13,7 @@ public class ChoiceUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Instance = this;
         choicePanel.SetActive(false);
         killButton.onClick.AddListener(() => makeChoice("kill"));
         spareButton.onClick.AddListener(() => makeChoice("spare"));
@@ -28,11 +30,8 @@ public class ChoiceUI : MonoBehaviour
         choicePanel.SetActive(false);
         if (choice == "kill")
         {
-            Destroy(currentEnemy.gameObject);
+            MinigameManagerTrue.singleton.hasKilled = true;
         }
-        else
-        {
-            currentEnemy.gameObject.SetActive(false);
-        }
+        Destroy(currentEnemy.gameObject);
     }
 }
